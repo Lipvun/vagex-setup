@@ -35,7 +35,7 @@ func_in_flash() {
 func_in_ff() {
 	wget $ff_addr
 	tar xjf firefox*.tar.bz2
-	mv -r firefox ~/
+	mv  firefox ~/
 	rm firefox*.tar.bz2
 }
 
