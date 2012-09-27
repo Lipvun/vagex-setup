@@ -8,6 +8,7 @@
 #  修改部分代码，并加入注释
 #备注：
 #	尽量在screen下运行以防中途断线
+#	第一次重启后无法输入 vagex ID ，点击 cancel ，依次按 ctrl + w 和 ctrl + q 关掉浏览器后，转向终端执行以下命令重启后 VNC 登陆，正常输入 vagex ID 。 
 #用法： 安装完成后用vnc连接后进行相应firefox优化后, File > Open File ，选择 Video Quality Manager 安装文件，安装后再安装 vagex_firefox_add_on*.xpi
 #       firefox优化无非就是关掉更新，关历史记录，更改首页为空白页面……
 
