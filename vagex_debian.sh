@@ -62,18 +62,17 @@ func_in_vnc() {
 }
 
 apt-get update &&
-
-apt-get -y --force-yes install aptitude wget &&
-
-aptitude -y install mercurial libasound2-dev libcurl4-openssl-dev libnotify-dev libxt-dev libiw-dev mesa-common-dev autoconf2.13 yasm bzip2 zip libidl-dev &&
-
+#apt-get -y --force-yes install aptitude wget &&    #非必须，除非是安装最精简的debian无aptitude和wget
+#安装必要依赖
+apt-get -y install mercurial libasound2-dev libcurl4-openssl-dev libnotify-dev libxt-dev libiw-dev mesa-common-dev autoconf2.13 yasm bzip2 zip libidl-dev &&
+#安装vnc
 func_in_vnc
-
+#安装firefox
 func_in_ff
-
+#安装flash
 func_in_flash
 
-
+#下载vagex及youtube优化插件。
 wget $vagex_addr &&
 wget $yvqm_addr &&
 
