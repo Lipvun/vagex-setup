@@ -1,0 +1,5 @@
+#!/bin/sh
+
+temp=$(ps aux | grep [f]irefox-bin | awk '{print $2}')
+[ -n "$temp" ] && kill $temp > /dev/null 2>&1
+~/firefox/firefox --display=:1 > /dev/null 2>&1

@@ -1,0 +1,59 @@
+#!/bin/sh
+### BEGIN INIT INFO
+# Provides:          vncserverd
+# Required-Start:    $all
+# Required-Stop:     $all
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Description:       VNC server daemon
+### END INIT INFO
+
+# Source function library.
+. /lib/lsb/init-functions
+# The display that VNC will use
+DISPLAY="1"
+# The Desktop geometry to use. 800x600 1024x768 1280x1024
+GEOMETRY="800x600"
+
+prog="VNC server"
+comm="Xvnc4"
+
+start() {
+        echo -n "Starting $prog..."
+        vncserver -geometry ${GEOMETRY} :${DISPLAY} > /dev/null 2>&1 && \
+        echo "DONE!" || echo "ERROR!"
+}
+
+stop() {
+        echo -n "Shutting down $prog..."
+        vncserver -kill :${DISPLAY} > /dev/null 2>&1 && \
+        echo "DONE!" || echo "ERROR!"
+        temp=$(ps auxww | grep [X]vnc4 | awk '{print $2}')
+        [ -n "$temp" ] && kill $temp > /dev/null 2>&1
+        [ -f /tmp/.X1-lock ] && rm -f /tmp/.X1-lock > /dev/null 2>&1
+        [ -d /tmp/.X11-unix/ ] && rm -rf /tmp/.X11-unix/ > /dev/null 2>&1
+}
+
+case "$1" in
+  start)
+        start
+        ;;
+  stop)
+        stop
+        ;;
+  restart)
+        stop
+        sleep 3s
+        start
+        ;;
+  status)
+        echo
+        echo "$prog(pid:"$(pidofproc $comm)") "$(status_of_proc $comm)
+        echo
+        ;;
+  *)
+        echo
+        echo "Usage: $0 {start|stop|status|restart}"
+        echo
+        exit 1
+esac
