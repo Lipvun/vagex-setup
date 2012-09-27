@@ -73,8 +73,7 @@ func_in_ff
 func_in_flash
 
 #下载vagex及youtube优化插件。
-wget $vagex_addr &&
-wget $yvqm_addr &&
+wget $vagex_addr 
+wget $yvqm_addr 
 
-/etc/init.d/vncserverd start &&
-
+/etc/init.d/vncserverd start 
