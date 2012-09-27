@@ -27,9 +27,9 @@ func_in_flash() {
 	wget $flash_addr &&
 	mkdir ~/.mozilla
 	mkdir ~/.mozilla/plugins
-	tar xzf install_add_on*.tar.gz
+	tar xzf install*.tar.gz
 	mv libflashplayer.so ~/.mozilla/plugins
-	rm install_add_on*.tar.gz
+	rm install*.tar.gz
 }
 
 func_in_ff() {
