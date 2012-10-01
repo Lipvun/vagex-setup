@@ -28,7 +28,7 @@ func_vncpwd() {
 
 
 func_in_flash() {
-	wget $flash_addr &&
+	wget $flash_addr 
 	mkdir ~/.mozilla
 	mkdir ~/.mozilla/plugins
 	tar xzf install*.tar.gz
@@ -44,13 +44,13 @@ func_in_ff() {
 }
 
 func_in_vnc() {
-	aptitude -y install vnc4server &&
+	aptitude -y install vnc4server 
 	func_vncpwd
-	vncserver && vncserver -kill :1 &&
-	mv ~/.vnc/xstartup ~/.vnc/xstartupbak &&
-	mv xstartup ~/.vnc/ && chmod a+x ~/.vnc/xstartup &&
+	vncserver && vncserver -kill :1 
+	mv ~/.vnc/xstartup ~/.vnc/xstartupbak 
+	mv xstartup ~/.vnc/ && chmod a+x ~/.vnc/xstartup 
 
-	mv vncserverd /etc/init.d && chmod a+x /etc/init.d/vncserverd &&
+	mv vncserverd /etc/init.d && chmod a+x /etc/init.d/vncserverd 
 	if [ -f /etc/rc.local ]; then
 		sed -i '/exit\ 0/d' /etc/rc.local
 		cat <<- EOF >> /etc/rc.local
@@ -65,8 +65,8 @@ func_in_vnc() {
 
 }
 
-apt-get update &&
-#apt-get -y --force-yes install aptitude wget &&    #非必须，除非是安装最精简的debian无aptitude和wget
+apt-get update 
+#apt-get -y --force-yes install aptitude wget     #非必须，除非是安装最精简的debian无aptitude和wget
 #安装必要依赖
 apt-get -y install mercurial libasound2-dev libcurl4-openssl-dev libnotify-dev libxt-dev libiw-dev mesa-common-dev autoconf2.13 yasm bzip2 zip libidl-dev 
 #安装vnc
