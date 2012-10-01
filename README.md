@@ -3,7 +3,7 @@
 
 vagex setup script for debian
 
-vagex vision:1.8
+vagex vision:1.4
 
 #功能：
  基于debian的vagex挂机一键包
