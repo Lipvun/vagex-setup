@@ -12,6 +12,9 @@
 #用法： 安装完成后用vnc连接后进行相应firefox优化后, File > Open File ，选择 Video Quality Manager 安装文件，安装后再安装 vagex_firefox_add_on*.xpi
 #       firefox优化无非就是关掉更新，关历史记录，更改首页为空白页面……
 
+vagex_addr="http://vagex.com/vagex_add_on-1.4.4.xpi"
+#vagex_addr="https://addons.mozilla.org/firefox/downloads/file/168846/vagex_firefox_add_on-1.4.4-fn+an+fx+sm.xpi"
+
 apt-get update 
 #使用iceweasel
 apt-get -q -y --force-yes install jwm vnc4server xterm iceweasel
@@ -50,7 +53,7 @@ cp libflashplayer.so /usr/lib/iceweasel/plugins
 
 
 #下载vagex及youtube优化插件。
-wget https://addons.mozilla.org/firefox/downloads/file/168846/vagex_firefox_add_on-1.4.4-fn+an+fx+sm.xpi 
+wget $vagex_addr 
 wget https://addons.mozilla.org/firefox/downloads/file/134971/youtube_video_quality_manager-1.2-fx.xpi
 
 /etc/init.d/vncserverd start 
