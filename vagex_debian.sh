@@ -1,7 +1,7 @@
 #!/bin/bash
 #功能：
 #	基于debian的vagex挂机一键包
-#原作者：主机控
+#作者：耕耘
 #修改：
 #  vagex插件更新为1.4
 #  不再依赖googlecode仓库 http://code.google.com/p/vagex-debian/
