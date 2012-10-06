@@ -15,6 +15,9 @@
 apt-get update 
 #使用iceweasel
 apt-get -q -y --force-yes install jwm vnc4server xterm iceweasel
+# 安装中文字库，设置locales，非必需
+apt-get install ttf-wqy-zenhei
+dpkg-reconfigure locales
 #激活粘贴板，可以在vnc桌面环境下，vps和本机自由粘贴复制。
 #vncconfig -nowin &
 vncserver && vncserver -kill :1
