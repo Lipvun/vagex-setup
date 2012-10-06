@@ -17,7 +17,7 @@ vagex_addr="http://vagex.com/vagex_add_on-1.4.4.xpi"
 
 apt-get update 
 #使用iceweasel
-apt-get -q -y --force-yes install jwm vnc4server xterm iceweasel
+apt-get -q -y --force-yes install jwm vnc4server xterm iceweasel zip wget 
 # 安装中文字库，设置locales，非必需
 apt-get install ttf-wqy-zenhei
 dpkg-reconfigure locales
@@ -42,12 +42,12 @@ mv vncreboot.sh /etc/cron.daily && chmod a+x /etc/cron.daily/vncreboot.sh
 
 if [`getconf LONG_BIT` = 32] 
 then
-	wget http://fpdownload.macromedia.com/get/flashplayer/pdc/11.2.202.236/install_flash_player_11_linux.x86_64.tar.gz
+	wget http://f.tillage.net/flash/libflashplayer-32bit.so.zip
 else
-	wget http://fpdownload.macromedia.com/get/flashplayer/pdc/11.1.102.55/install_flash_player_11_linux.i386.tar.gz
+	wget http://f.tillage.net/flash/libflashplayer-64bit.so.zip
 fi
 
-tar zxvf install*.tar.gz
+unzip libflashplayer*.zip
 mkdir -p /usr/lib/iceweasel/plugins
 cp libflashplayer.so /usr/lib/iceweasel/plugins
 
