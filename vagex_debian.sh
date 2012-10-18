@@ -27,7 +27,7 @@ vncserver && vncserver -kill :1
 mv ~/.vnc/xstartup ~/.vnc/xstartupbak
 mv xstartup ~/.vnc/ && chmod a+x ~/.vnc/xstartup
 
-mv vncserverd /etc/init.d && chmod a+x /etc/init.d/vncserverd
+cp vncserverd /etc/init.d && chmod a+x /etc/init.d/vncserverd
 if [ -f /etc/rc.local ]; then
 	sed -i '/exit\ 0/d' /etc/rc.local
 	cat <<- EOF >> /etc/rc.local
@@ -38,7 +38,7 @@ else
 	update-rc.d vncserverd defaults
 fi
 
-mv vncreboot.sh /etc/cron.daily && chmod a+x /etc/cron.daily/vncreboot.sh
+cp vncreboot.sh /etc/cron.daily/vncreboot && chmod a+x /etc/cron.daily/vncreboot
 
 if [`getconf LONG_BIT` = 32] 
 then
