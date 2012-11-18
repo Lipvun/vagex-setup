@@ -38,7 +38,7 @@ else
 	update-rc.d vncserverd defaults
 fi
 
-cp vncreboot.sh /etc/cron.daily/vncreboot && chmod a+x /etc/cron.daily/vncreboot
+cp vncreboot.sh /etc/cron.hourly/vncreboot && chmod a+x /etc/cron.hourly/vncreboot
 
 if [`getconf LONG_BIT` = 32] 
 then
