@@ -39,6 +39,7 @@ else
 fi
 
 cp vncreboot.sh /etc/cron.hourly/vncreboot && chmod a+x /etc/cron.hourly/vncreboot
+/etc/init.d/cron restart
 
 if [`getconf LONG_BIT` = 32] 
 then
