@@ -3,7 +3,7 @@
 #	基于debian的vagex挂机一键包
 #作者：耕耘
 #修改：
-#  vagex插件更新为1.4
+#  vagex插件更新为1.4.5
 #  不再依赖googlecode仓库 http://code.google.com/p/vagex-debian/
 #  修改部分代码，并加入注释
 #备注：
@@ -12,7 +12,7 @@
 #用法： 安装完成后用vnc连接后进行相应firefox优化后, File > Open File ，选择 Video Quality Manager 安装文件，安装后再安装 vagex_firefox_add_on*.xpi
 #       firefox优化无非就是关掉更新，关历史记录，更改首页为空白页面……
 
-vagex_addr="http://vagex.com/vagex_add_on-1.4.4.xpi"
+vagex_addr="http://vagex.com/vagex_add_on-1.4.5.xpi"
 #vagex_addr="https://addons.mozilla.org/firefox/downloads/file/168846/vagex_firefox_add_on-1.4.4-fn+an+fx+sm.xpi"
 
 apt-get update 
