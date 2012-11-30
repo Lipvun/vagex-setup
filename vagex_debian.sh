@@ -4,7 +4,7 @@
 #作者：耕耘
 #修改：
 #  11.30 vagex 1.5.1
-#  vagex插件更新为1.4.5
+#  11.20 vagex插件更新为1.4.5
 #  不再依赖googlecode仓库 http://code.google.com/p/vagex-debian/
 #  修改部分代码，并加入注释
 #备注：
