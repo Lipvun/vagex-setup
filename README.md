@@ -3,7 +3,7 @@
 
 vagex setup script for debian
 
-vagex vision:1.4.5
+vagex vision:1.5.6
 
 #功能：
 	vncserver挂vagex
