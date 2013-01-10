@@ -3,11 +3,11 @@
 
 vagex setup script for debian
 
-vagex vision:1.5.6
+vagex vision:1.5.7
 
 #功能：
 	vncserver挂vagex
-	采用vncserver+iceweasel+vagex1.4
+	采用vncserver+iceweasel+vagex1.5
 #备注：
 	尽量在screen下运行以防中途断线
 	测试问题提交：http://www.tillage.net/vagex-debian-install-script/
